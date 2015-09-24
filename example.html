@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promo timer</title>
+</head>
+<body>
+<h1>Span mode</h1>
+<div class="timer">
+    <span class="hours">0</span> hours
+    <span class="minutes">0</span> minutes
+    <span class="seconds">0</span> seconds
+</div>
+
+<h1>String mode</h1>
+<div class="timer-string" data-end-at="2030-12-31"></div>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="jquery-promo-timer.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        $('.timer').promoTimer({
+            endAt: new Date('2030-10-10 20:00:00')
+        });
+        $('.timer-string').promoTimer({
+            isString: true
+        });
+    });
+</script>
+</body>
+</html>
